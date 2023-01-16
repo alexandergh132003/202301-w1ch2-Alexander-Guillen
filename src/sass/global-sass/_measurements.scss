@@ -9,6 +9,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  background-image: url("/src/media/pattern-background-mobile.svg");
 }
 
 .order-container {
@@ -33,6 +34,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
     > .text-block__title {
       font-size: pxToRem(22);
@@ -80,16 +82,30 @@ body {
       > a {
         font-size: 13px;
         font-weight: 700;
+        text-decoration: underline;
       }
     }
 
-    .text-block__button {
-      color: white;
-      background: $color-primary-two;
-      width: 275.74px;
-      text-align: center;
-      padding: 17px 63px;
-      border-radius: 10px;
+    .text-block__hiper-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 33px;
+      gap: 20px;
+      .hiper-links__proceed {
+        color: white;
+        background: $color-primary-two;
+        width: 275.74px;
+        text-align: center;
+        padding: 17px 63px;
+        border-radius: 10px;
+      }
+
+      .hiper-links__cancel {
+        color: $color-neutral-two;
+        font-weight: 800;
+      }
     }
   }
 }

@@ -13,3 +13,10 @@ body {
   margin-block-start: 0;
   margin-block-end: 0;
 }
+
+a,
+a:visited,
+a:focus,
+a:hover {
+  text-decoration: none;
+}
