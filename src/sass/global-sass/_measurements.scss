@@ -1,0 +1,111 @@
+@use "./colors" as *;
+
+@function pxToRem($pixels, $base: 16) {
+  @return calc($pixels / $base) * 1rem;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/media/pattern-background-mobile.svg");
+}
+
+.order-container {
+  margin: pxToRem(70) pxToRem(23);
+  width: pxToRem(329);
+  height: pxToRem(568);
+  background-color: white;
+  border-radius: 16px;
+
+  > .image-container {
+    height: 160px;
+
+    > img {
+      border-top-left-radius: pxToRem(16);
+      border-top-right-radius: pxToRem(16);
+    }
+  }
+
+  > .text-block {
+    height: pxToRem(408);
+    padding: pxToRem(35) pxToRem(24) 0 pxToRem(24);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    > .text-block__title {
+      font-size: pxToRem(22);
+      font-weight: 900;
+    }
+
+    > .text-block__head-line {
+      width: pxToRem(250);
+      font-size: pxToRem(15);
+      text-align: center;
+      line-height: 25px;
+      color: $color-neutral-two;
+    }
+
+    > .text-block__info {
+      padding: 14px;
+      background-color: $color-neutral-one;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px;
+
+      > .info__anual-plan {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 20px;
+        width: 200px;
+
+        > .anual-plan__price {
+          display: flex;
+          flex-direction: column;
+          font-size: 15px;
+
+          > .price__period {
+            font-weight: 900;
+          }
+          > .price__amount {
+            color: $color-neutral-two;
+          }
+        }
+      }
+
+      > a {
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+    }
+
+    .text-block__hiper-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 33px;
+      gap: 20px;
+      .hiper-links__proceed {
+        color: white;
+        background: $color-primary-two;
+        width: 275.74px;
+        text-align: center;
+        padding: 17px 63px;
+        border-radius: 10px;
+      }
+
+      .hiper-links__cancel {
+        color: $color-neutral-two;
+        font-weight: 800;
+      }
+    }
+  }
+}

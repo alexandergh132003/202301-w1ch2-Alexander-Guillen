@@ -6,11 +6,44 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="A music app with an annual plan">
+  <link rel="stylesheet" href="/src/sass/styles.scss">
   <title>Music Order</title>
 </head>
 
 <body>
+  <article class="order-container">
 
+    <div class="order-container__image-container image-container">
+      <img src="/src/media/illustration-hero.svg" alt="Illustration Hero" width="329" height="160">
+    </div>
+    <div class="order-container__text-block text-block">
+      <h2 class="text-block__title">Order Summary</h2>
+      <span class="text-block__head-line">You can now listen to millions of
+        songs, audiobooks, and podcasts on any device anywhere you like!
+      </span>
+      <div class="text-block__info info">
+
+        <div class="info__anual-plan anual-plan">
+          <img src="/src/media/icon-music.svg" alt="music icon">
+
+          <div class="anual-plan__price price">
+            <span class="price__period">Annual Plan</span>
+            <span class="price__amount">$59.99/year</span>
+          </div>
+        </div>
+
+        <a href="change anchor">Change</a>
+      </div>
+      <div class="text-block__hiper-links">
+        <a href="Proceed to Payment" class="hiper-links__proceed">
+          Proceed to Payment
+        </a>
+        <a href="Cancel Order" class="hiper-links__cancel">Cancel Order</a>
+      </div>
+
+    </div>
+
+  </article>
 </body>
 
 </html>
