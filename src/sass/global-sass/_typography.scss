@@ -1,0 +1,14 @@
+@import "/node_modules/@fontsource/red-hat-display/500.css";
+@import "/node_modules/@fontsource/red-hat-display/700.css";
+@import "/node_modules/@fontsource/red-hat-display/900.css";
+
+@function pxToRem($pixels, $base: 16) {
+  @return calc($pixels / $base) * 1rem;
+}
+
+$font-family-primary: "Red Hat Display", sans serif;
+
+body {
+  font-family: $font-family-primary;
+  font-size: pxToRem(16);
+}
