@@ -17,9 +17,9 @@ body {
   width: pxToRem(329);
   height: pxToRem(568);
   background-color: white;
-  border-radius: 16px;
+  border-radius: pxToRem(16);
   > .image-container {
-    height: 160px;
+    height: pxToRem(160);
 
     > img {
       border-top-left-radius: pxToRem(16);
@@ -41,33 +41,34 @@ body {
     }
 
     > .text-block__head-line {
-      width: pxToRem(250);
+      width: 250px;
       font-size: pxToRem(15);
       text-align: center;
-      line-height: 25px;
+      line-height: pxToRem(25);
       color: $color-neutral-two;
     }
 
     > .text-block__info {
-      padding: 14px;
+      width: pxToRem(274.74);
+      padding: pxToRem(14);
       background-color: $color-neutral-one;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      border-radius: 10px;
+      border-radius: pxToRem(10);
 
       > .info__anual-plan {
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 20px;
-        width: 200px;
+        gap: pxToRem(20);
+        width: pxTorRem(200);
 
         > .anual-plan__price {
           display: flex;
           flex-direction: column;
-          font-size: 15px;
+          font-size: pxToRem(15);
 
           > .price__period {
             font-weight: 900;
@@ -79,7 +80,7 @@ body {
       }
 
       > a {
-        font-size: 13px;
+        font-size: pxToRem(13);
         font-weight: 700;
         text-decoration: underline;
       }
@@ -91,24 +92,32 @@ body {
       align-items: center;
       justify-content: space-between;
       margin-bottom: 33px;
-      gap: 20px;
+      gap: pxToRem(20);
 
       .hiper-links__proceed {
         color: white;
         background: $color-primary-two;
-        width: 275.74px;
+        width: pxToRem(275.74);
         text-align: center;
-        padding: 17px 63px;
-        border-radius: 10px;
+        padding: pxToRem(17) pxToRem(63);
+        border-radius: pxToRem(10);
         box-shadow: 0 2.8px 2.2px, 0 6.7px 5.3px rgba(0, 0, 0, 0.048),
           0 12.5px 10px rgba(0, 0, 0, 0.06),
           0 22.3px 17.9px rgba(0, 0, 0, 0.072),
           0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12);
+
+        &:hover {
+          background: #766cf1;
+        }
       }
 
       .hiper-links__cancel {
         color: $color-neutral-two;
-        font-weight: 800;
+        font-weight: 900;
+
+        &:hover {
+          color: $color-neutral-three;
+        }
       }
     }
   }
